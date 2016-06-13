@@ -22,7 +22,6 @@
         <activity
             android:name=".ActivityB"
             android:label="@string/title_activity_activity_b"
-            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
