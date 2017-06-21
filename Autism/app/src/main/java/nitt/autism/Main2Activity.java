@@ -29,7 +29,7 @@ public class Main2Activity extends AppCompatActivity {
 
     final int REQUEST_CODE_GALLERY = 999;
 
-    public static SQLiteHelper sqLiteHelper;
+    public static SQLiteHelper sqLiteHelper = new SQLiteHelper(this,"FoodDB.db",null,1);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +39,6 @@ public class Main2Activity extends AppCompatActivity {
         
         init();
 
-        sqLiteHelper = new SQLiteHelper(this,"FoodDB.db",null,1);
         sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS FOOD (Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, image BLOB)");
 
         btnChoose.setOnClickListener(new View.OnClickListener() {
